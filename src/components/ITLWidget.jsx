@@ -6,9 +6,7 @@ import "../assets/styles.scss";
 // COMPONENT IMPORTS
 import ClearInfo from "./ClearInfo";
 import EntrantInfo from "./EntrantInfo";
-import EntrantName from "./EntrantName";
 import Ladder from "./Ladder";
-import ProfilePicture from "./ProfilePicture";
 import TechLevelInfo from "./TechLevelInfo";
 
 function ITLWidget() {
@@ -63,12 +61,13 @@ function ITLWidget() {
   return (
     <div className={`${config.currentStyle} bgwrap`}>
       <div className="wrapper">
-        <ProfilePicture
-          url={config.avatarSource == "" ? "Avatar.png" : config.avatarSource}
+        <img
+          src={config.avatarSource == "" ? "Avatar.png" : config.avatarSource}
         />
-        <EntrantName
-          name={config.overrideName == "" ? entrant.name : config.overrideName}
-        />
+        <h1>
+          {config.overrideName == "" ? entrant.name : config.overrideName}
+        </h1>
+
         <EntrantInfo entrant={entrant} />
         <ClearInfo entrant={entrant} />
         <TechLevelInfo entrant={entrant} />

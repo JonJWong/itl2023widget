@@ -4,6 +4,15 @@ ul {
   list-style: none;
 }
 
+h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 .light {
   color: black;
   font-family: "Bahnschrift", Times, serif;
@@ -12,7 +21,7 @@ ul {
     background-color: rgba(255, 255, 255, 0.80);
   }
 
-  .entrant-id {
+  .entrant-info li h2 {
     color: #999999;
   }
   
@@ -63,7 +72,7 @@ ul {
     background-color: rgba(0, 0, 0, 0.7);
   }
 
-  .entrant-id {
+  .entrant-info li h2 {
     color: #aaaaaa;
   }
 
@@ -131,20 +140,17 @@ ul {
     grid-auto-rows: 33px minmax(0px, 140px);
     height: 124px;
 
-    .profile-picture {
+    > img {
+      object-fit: contain;
+      width: 100px;
+      height: 100px;
       grid-column: 1;
       grid-row: 1;
       margin-top: 11px;
       margin-left: 2px;
-
-      img {
-        object-fit: contain;
-        width: 100px;
-        height: 100px;
-      }
     }
 
-    .entrant-name {
+    > h1 {
       grid-column: 2;
       grid-row: 1;
       font-size: 28px;
@@ -160,13 +166,13 @@ ul {
       padding-top: 4px;
       margin-left: 2px;
 
-      .entrant-id {
+      h2 {
         font-size: 8px;
         margin-top: -4px;
         padding: 0px 4px;
       }
 
-      .entrant-rank {
+      h3 {
         font-size: 18px;
         padding-bottom: 4px;
       }
@@ -250,19 +256,17 @@ ul {
     grid-auto-rows: 33px minmax(0px, 124px) minmax(0px, 140px);
     height: 124px;
 
-    .profile-picture {
+    > img {
+      object-fit: contain;
+      width: 100px;
+      height: 100px;
       grid-column: 1;
       grid-row: 1;
-      margin: 11px 0px 0px 2px;
-
-      img {
-        object-fit: contain;
-        width: 100px;
-        height: 100px;
-      }
+      margin-top: 11px;
+      margin-left: 2px;
     }
 
-    .entrant-name {
+    > h1 {
       grid-column: 2;
       grid-row: 1;
       font-size: 28px;
@@ -278,13 +282,13 @@ ul {
       padding-top: 4px;
       margin-left: 2px;
 
-      .entrant-id {
+      h2 {
         font-size: 8px;
         margin-top: -4px;
         padding: 0px 4px;
       }
 
-      .entrant-rank {
+      h3 {
         font-size: 18px;
         padding-bottom: 4px;
       }
