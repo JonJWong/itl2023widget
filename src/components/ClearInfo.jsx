@@ -1,28 +1,28 @@
 const ClearInfo = (props) => {
   const { entrant } = props;
   return (
-    <div className="clear-info">
-      <div className="passes">
+    <ul className="clear-info">
+      <li className="passes">
         <div>Passes:</div>
         <div>{entrant.totalPass}</div>
-      </div>
-      <div className="fcs">
+      </li>
+      <li className="fcs">
         <div>FCs:</div>
         <div>{entrant.totalFc}</div>
-      </div>
-      <div className="fecs">
+      </li>
+      <li className="fecs">
         <div>FECs:</div>
         <div>{entrant.totalFec}</div>
-      </div>
-      <div className="quads">
+      </li>
+      <li className="quads">
         <div>Quads:</div>
         <div>{entrant.totalQuad}</div>
-      </div>
-      <div className="quints">
+      </li>
+      <li className="quints">
         <div>Quints:</div>
         <div>{entrant.totalQuint}</div>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

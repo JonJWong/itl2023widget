@@ -1,36 +1,36 @@
 const TechLevelInfo = (props) => {
   const { entrant } = props;
   return (
-    <div className="tech-level-info">
-      <div>
+    <ul className="tech-level-info">
+      <li>
         <div>BR:</div>
         <div>{entrant.bracketLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>XO:</div>
         <div>{entrant.crossoverLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>FS:</div>
         <div>{entrant.footswitchLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>JA:</div>
         <div>{entrant.jackLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>SS:</div>
         <div>{entrant.sideswitchLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>DS:</div>
         <div>{entrant.doublestepLevel}</div>
-      </div>
-      <div>
+      </li>
+      <li>
         <div>ST:</div>
         <div>{entrant.staminaLevel}</div>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 };
 

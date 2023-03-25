@@ -136,6 +136,12 @@ ul {
       grid-row: 1;
       margin-top: 11px;
       margin-left: 2px;
+
+      img {
+        object-fit: contain;
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .entrant-name {
@@ -179,7 +185,7 @@ ul {
       grid-row: 1;
       padding: 30px 15px 0px 0px;
 
-      > * {
+      li {
         width: 100%;
         font-size: 14px;
         padding-bottom: 1px;
@@ -193,7 +199,7 @@ ul {
       grid-row: 1;
       padding: 28px 15px 0px 10px;
 
-      > * {
+      li {
         font-size: 11px;
         display: flex;
         justify-content: space-between;
@@ -248,6 +254,12 @@ ul {
       grid-column: 1;
       grid-row: 1;
       margin: 11px 0px 0px 2px;
+
+      img {
+        object-fit: contain;
+        width: 100px;
+        height: 100px;
+      }
     }
 
     .entrant-name {
@@ -291,7 +303,7 @@ ul {
       grid-row: 1;
       padding: 30px 5px 0px 0px;
 
-      > * {
+      li {
         font-size: 14px;
         padding-bottom: 1px;
         display: flex;
@@ -304,7 +316,7 @@ ul {
       grid-row: 1;
       padding: 28px 5px 0px 10px;
 
-      > * {
+      li {
         font-size: 11px;
         display: flex;
         justify-content: space-between;
