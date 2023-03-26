@@ -1,3 +1,4 @@
+// RESETS
 ul {
   margin: 0;
   padding: 0;
@@ -13,54 +14,24 @@ h1, h2, h3, h4, h5 {
 	vertical-align: baseline;
 }
 
+// THEMES
 .light {
   color: black;
   font-family: "Bahnschrift", Times, serif;
   
-  .wrapper {
-    background-color: rgba(255, 255, 255, 0.80);
-  }
-
-  .entrant-info li h2 {
-    color: #999999;
-  }
-  
-  .fcs {
-    color: #007800;
-  }
-  
-  .fecs {
-    color: #daa520;
-  }
-  
-  .quads {
-    color: #34a2d0;
-  }
-  
-  .quints {
-    color: #ee637b;
-  }
-
-  .rival {
-    background-color: rgba(221, 204, 204);
-  }
-
-  .self {
-    background-color: rgba(204, 221, 204);
-  }
-
-  .neutral {
-    background-color: rgba(238, 238, 238);
-  }
+  .wrapper {background-color: rgba(255, 255, 255, 0.80)}
+  .entrant-info li h2 {color: #999999}
+  .fcs {color: #007800}
+  .fecs {color: #daa520}
+  .quads {color: #34a2d0}
+  .quints {color: #ee637b}
+  .rival {background-color: rgba(221, 204, 204)}
+  .self {background-color: rgba(204, 221, 204)}
+  .neutral {background-color: rgba(238, 238, 238)}
 
   &.vertical {
-    .ladder {
-      background-color: rgba(238, 238, 238);
-    }
-  
-    .ladder-title {
-      background-color: rgba(238, 238, 238);
-    }
+    .ladder {background-color: rgba(238, 238, 238)}
+    .ladder-title {background-color: rgba(238, 238, 238)}
   }
 }
 
@@ -68,76 +39,32 @@ h1, h2, h3, h4, h5 {
   color: white;
   font-family: "Bahnschrift", Times, serif;
   
-  .wrapper {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .entrant-info li h2 {
-    color: #aaaaaa;
-  }
-
-  .fcs {
-    color: lightgreen;
-  }
-
-  .fecs {
-    color: goldenrod;
-  }
-
-  .quads {
-    color: skyblue;
-  }
-
-  .quints {
-    color: pink;
-  }
-
-  .rival {
-    background-color: rgba(152, 102, 102, 0.5);
-  }
-
-  .self {
-    background-color: rgba(102, 152, 102, 0.5);
-  }
-
-  .neutral {
-    background-color: rgba(170, 170, 170, 0.5);
-  }
+  .wrapper {background-color: rgba(0, 0, 0, 0.7)}
+  .entrant-info li h2 {color: #aaaaaa}
+  .fcs {color: lightgreen}
+  .fecs {color: goldenrod}
+  .quads {color: skyblue}
+  .quints {color: pink}
+  .rival {background-color: rgba(152, 102, 102, 0.5)}
+  .self {background-color: rgba(102, 152, 102, 0.5)}
+  .neutral {background-color: rgba(170, 170, 170, 0.5)}
 
   &.vertical {
-    .ladder-title {
-      background-color: rgba(76, 76, 76, 1)
-    }
-    
-    .rival {
-      background-color: rgba(152, 102, 102, 1);
-    }
-  
-    .self {
-      background-color: rgba(102, 152, 102, 1);
-    }
-  
-    .neutral {
-      background-color: rgba(76, 76, 76, 1);
-    }
+    .ladder-title {background-color: rgba(76, 76, 76, 1)}
+    .rival {background-color: rgba(152, 102, 102, 1)}
+    .self {background-color: rgba(102, 152, 102, 1)}
+    .neutral {background-color: rgba(76, 76, 76, 1)}
   }
 }
 
-.horizontal {
-  &.bgwrap {
-    background-image: url("../../bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 620px;
-    height: 124px;
-  }
+.bgwrap {
+  background-image: url("../../bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   .wrapper {
     display: grid;
-    grid-template-columns: 105px 125px 110px 70px 200px;
-    gap: 2px;
-    grid-auto-rows: 33px minmax(0px, 140px);
     height: 124px;
 
     > img {
@@ -189,10 +116,8 @@ h1, h2, h3, h4, h5 {
     .clear-info {
       grid-column: 3;
       grid-row: 1;
-      padding: 30px 15px 0px 0px;
 
       li {
-        width: 100%;
         font-size: 14px;
         padding-bottom: 1px;
         display: flex;
@@ -203,8 +128,7 @@ h1, h2, h3, h4, h5 {
     .tech-level-info {
       grid-column: 4;
       grid-row: 1;
-      padding: 28px 15px 0px 10px;
-
+      
       li {
         font-size: 11px;
         display: flex;
@@ -213,27 +137,60 @@ h1, h2, h3, h4, h5 {
     }
 
     .ladder {
-      grid-column: 5;
-      grid-row: 1;
       font-size: 14px;
 
       > div {
         text-decoration: underline;
-        padding-bottom: 1px;
         font-size: 14px;
       }
 
       > ul {
         li {
-          display: flex;
-          justify-content: space-between;
-          padding-right: 2px;
-        }
+          li {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 2px;
+          }
 
-        .ladder-rank {
-          max-height: 17px;
-          overflow: hidden;
+          .ladder-rank {
+            max-height: 17px;
+            overflow: hidden;
+          }
         }
+      }
+    }
+  }
+}
+
+.horizontal {
+  &.bgwrap {
+    max-width: 620px;
+    height: 124px;
+  }
+
+  .wrapper {
+    grid-template-columns: 105px 125px 110px 70px 200px;
+    gap: 2px;
+    grid-auto-rows: 33px minmax(0px, 140px);
+
+    .clear-info {
+      padding: 30px 15px 0px 0px;
+
+      li {
+        width: 100%;
+      }
+    }
+
+    .tech-level-info {
+      padding: 28px 15px 0px 10px;
+    }
+
+    .ladder {
+      grid-column: 5;
+      grid-row: 1;
+
+      > div {
+        padding-bottom: 1px;
       }
     }
   }
@@ -241,90 +198,21 @@ h1, h2, h3, h4, h5 {
 
 .vertical {
   &.bgwrap {
-    background-image: url("../../bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     width: 410px;
     height: 124px;
   }
 
   .wrapper {
-    display: grid;
     grid-template-columns: 105px 125px 110px 70px;
     gap: 0px;
     grid-auto-rows: 33px minmax(0px, 124px) minmax(0px, 140px);
-    height: 124px;
-
-    > img {
-      object-fit: contain;
-      width: 100px;
-      height: 100px;
-      grid-column: 1;
-      grid-row: 1;
-      margin-top: 11px;
-      margin-left: 2px;
-    }
-
-    > h1 {
-      grid-column: 2;
-      grid-row: 1;
-      font-size: 28px;
-      font-weight: bold;
-      padding: 1px 0px;
-      margin-left: 2px;
-      white-space: nowrap;
-    }
-
-    .entrant-info {
-      grid-column: 2;
-      grid-row: 2;
-      padding-top: 4px;
-      margin-left: 2px;
-
-      h2 {
-        font-size: 8px;
-        margin-top: -4px;
-        padding: 0px 4px;
-      }
-
-      h3 {
-        font-size: 18px;
-        padding-bottom: 4px;
-      }
-
-      .entrant-points {
-        font-size: 16px;
-        padding: 2px 0px;
-        width: 100px;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
 
     .clear-info {
-      grid-column: 3;
-      grid-row: 1;
       padding: 30px 5px 0px 0px;
-
-      li {
-        font-size: 14px;
-        padding-bottom: 1px;
-        display: flex;
-        justify-content: space-between;
-      }
     }
 
     .tech-level-info {
-      grid-column: 4;
-      grid-row: 1;
       padding: 28px 5px 0px 10px;
-
-      li {
-        font-size: 11px;
-        display: flex;
-        justify-content: space-between;
-      }
     }
 
     .ladder {
@@ -332,25 +220,14 @@ h1, h2, h3, h4, h5 {
       padding-top: 0px;
       grid-column: 1 / 5;
       grid-row: 3;
-      font-size: 14px;
       
       > div {
-        text-decoration: underline;
         padding: 0px 0px 1px 3px;
-        font-size: 14px;
       }
 
       > ul {
-        li {
-          display: flex;
-          justify-content: space-between;
-          padding-right: 2px;
-        }
-
         .ladder-rank {
-          max-height: 17px;
           padding: 0px 3px;
-          overflow: hidden;
         }
       }
     }
