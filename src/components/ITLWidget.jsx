@@ -9,7 +9,7 @@ import EntrantInfo from "./EntrantInfo";
 import Ladder from "./Ladder";
 import TechLevelInfo from "./TechLevelInfo";
 
-function ITLWidget() {
+const ITLWidget = () => {
   const [state, setState] = useState(config.DEFAULT_STATE);
   const [loaded, setLoaded] = useState(false);
 
@@ -75,6 +75,6 @@ function ITLWidget() {
       </div>
     </div>
   );
-}
+};
 
 export default ITLWidget;
