@@ -17,7 +17,6 @@ h1, h2, h3, h4, h5 {
 // THEMES
 .light {
   color: black;
-  font-family: "Bahnschrift", Times, serif;
   
   .wrapper {background-color: rgba(255, 255, 255, 0.80)}
   .entrant-info li h2 {color: #999999}
@@ -37,7 +36,6 @@ h1, h2, h3, h4, h5 {
 
 .dark {
   color: white;
-  font-family: "Bahnschrift", Times, serif;
   
   .wrapper {background-color: rgba(0, 0, 0, 0.7)}
   .entrant-info li h2 {color: #aaaaaa}
@@ -64,6 +62,7 @@ h1, h2, h3, h4, h5 {
   background-repeat: no-repeat;
 
   .wrapper {
+    font-family: "Bahnschrift", Times, serif;
     display: grid;
     height: 124px;
 
