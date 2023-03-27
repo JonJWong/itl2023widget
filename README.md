@@ -12,7 +12,7 @@ To run the widget download the repository and follow the instructions in `howtou
 
 ## Acknowledgements:
 
-Original widget by [GWen](https://github.com/G-Wen) [Repo](https://github.com/G-Wen/itl2023widget).
+Original widget by [GWen](https://github.com/G-Wen).
 
 ITL Online 2023 integration by [VincentITG](https://github.com/vlnguyen).
 
