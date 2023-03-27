@@ -26,7 +26,7 @@ const ITLWidget = () => {
       .then((json) => {
         const data = json.data;
 
-        // Calculate the ranking points difference between the ENTRANT_ID and the rest of the ladder
+        // Calculate the ranking points difference between the current entrant and the rest of the ladder
         for (let i = 0; i < LADDER_LENGTH; i++) {
           data.ladder[i].difference =
             data.entrant.rankingPoints - data.ladder[i].rankingPoints;
@@ -41,17 +41,19 @@ const ITLWidget = () => {
   };
 
   useEffect(() => {
-    // runs at component mount
+    // Runs on component mount
     getInfo();
     const componentInterval = setInterval(() => getInfo(), REFRESH_INTERVAL);
 
     return () => {
-      // runs at component un-mount
+      // Runs on component un-mount
       clearInterval(componentInterval);
     };
 
-    /* Will run once on mount, and then whenever getInfo changes (never).
-      Still runs on dismount with return */
+    /*
+      Will run once on mount, and then whenever getInfo changes (never).
+      Still runs on dismount with return
+    */
   }, [getInfo]);
 
   if (!loaded) return <></>;

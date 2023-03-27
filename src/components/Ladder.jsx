@@ -4,7 +4,7 @@ const Ladder = (props) => {
   const { ladder } = props;
   return (
     <section className="ladder">
-      <div>ITL Online 2023 - Leaderboard</div>
+      <h2>ITL Online 2023 - Leaderboard</h2>
       <ul>
         {ladder.map((player, index) => {
           return (
