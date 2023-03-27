@@ -13,7 +13,7 @@ where `{entrantId}` is replaced with your `entrantId` and `{theme}` is one of `D
 1. Install [Node](https://nodejs.org/en/download/)
 2. Set the `entrantId` in `src/scripts/config.js:23` to your own `entrantId`[^1] and save.
 3. _Optional_ Make any additional customizations/changes, such as background image, avatar, overrideName, currentStyle.
-4. Open terminal/cmd and type `npm install && npm run build && npm run preview`, then press enter[^2].[^3]
+4. Open terminal/cmd and type `npm install && npm run build && npm run preview`, then press enter.[^2][^3]
 5. Set your browser source in OBS to `127.0.0.1:4173`.[^4]
 
 ## Customizations:
