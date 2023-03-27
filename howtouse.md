@@ -4,33 +4,30 @@ Please DM GWen#2607 on discord if you run into issues.
 
 You can also view the widget from the ITL 2023 Online website at:
 
-`https://itl2023.groovestats.com/stats?ENTRANT_ID={ENTRANT_ID}&theme={theme}`
+`https://itl2023.groovestats.com/stats?entrantId={entrantId}&theme={theme}`
 
-where `{ENTRANT_ID}` is replaced with your `ENTRANT_ID` and `{theme}` is one of `Dark`, `DarkVertical`, `Light`, or `LightVertical`.
+where `{entrantId}` is replaced with your `entrantId` and `{theme}` is one of `Dark`, `DarkVertical`, `Light`, or `LightVertical`.
 
 ## Running the Stream Stats Widget locally:
 
-1. Set the `ENTRANT_ID` in `widget.js` to your own `ENTRANT_ID`. Save.
-2. Set `index.html` as a browser source for your stream.
-
-You can find your `ENTRANT_ID` under Preferences on the ITL 2023 website.
+1. Install [Node](https://nodejs.org/en/download/)
+2. Set the `entrantId` in `src/scripts/config.js:23` to your own `entrantId`[^1] and save.
+3. Open terminal/cmd and run `npm install && npm run build && npm run preview`
+4. Set your browser source in OBS to `127.0.0.1:4173`.[^2]
 
 ## Customizations:
 
-To use a different theme themes change the stylesheet in `index.html` from `themes/dark/style.css` to:
+To use a different theme, change the number next to `currentStyle` in `src/scripts/config.js:24`.
 
-- Dark: `themes/dark/style.css`
-- Dark Vertical: `themes/darkvertical/style.css`
+If you want to change the profile image replace Avatar.png with your desired image.
 
-- Light: `themes/light/style.css`
-- Light Vertical: `themes/lightvertical/style.css`
+- If you want to use an alternative file format/file name specify the source in `src/scripts/cofig.js:25`.
 
-If you want to change the profile picture replace Avatar.png with the picture you want.
+If you want to change the background image replace bg.png with the your desired image.
 
-- If you want to use an alternative file format/file name specify the source inside of `widget.js`.
+- If you want to use an alternative file format/file name specify the source inside of `src/assets/common.scss:2`.
 
-If you want to change the background picture replace bg.png with the picture you want.
+If your name is too long you can override the name shown by providing an override name in `src/assets/config.js:26`.
 
-- If you want to use an alternative file format/file name specify the source inside of `style.css`.
-
-If your name is too long you can override the name it shows by providing an override name at the start of `widget.js`.
+[^1]You can find your `entrantId` under Preferences on the ITL 2023 website.
+[^2]Although 4173 is the default port, if it is already taken Vite may use a different port. The proper port is displayed in your command line after running `npm run preview`

@@ -12,8 +12,10 @@ To run the widget download the repository and follow the instructions in `howtou
 
 ## Acknowledgements:
 
+Original widget by [GWen](https://github.com/G-Wen) [Repo](https://github.com/G-Wen/itl2023widget).
+
 ITL Online 2023 integration by [VincentITG](https://github.com/vlnguyen).
 
-JSX conversion by [JWong](https://github.com/JonJWong).
+JSX conversion + Vite App by [JWong](https://github.com/JonJWong).
 
 Dark theme of the widget was provided courtesy of [Freis](https://github.com/gab-santi), minor modifications have been made.
