@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { config, LADDER_LENGTH, REFRESH_INTERVAL } from "../scripts/config";
 
-import "../assets/styles.scss";
+import "../assets/main.scss";
 
 // COMPONENT IMPORTS
 import ClearInfo from "./ClearInfo";

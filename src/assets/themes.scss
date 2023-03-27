@@ -1,0 +1,38 @@
+.light {
+  color: black;
+  
+  .wrapper {background-color: $lightbg}
+  .entrant-info li h2 {color: $lightgrey}
+  .fcs {color: $lightgreen}
+  .fecs {color: $lightyellow}
+  .quads {color: $lightblue}
+  .quints {color: $lightpink}
+  .neutral {background-color: $lightneutral}
+  .rival {background-color: $lightrival}
+  .self {background-color: $lightself}
+
+  &.vertical {
+    .ladder, .ladder > h2 {background-color: $lightneutral}
+  }
+}
+
+.dark {
+  color: white;
+  
+  .wrapper {background-color: $darkbg}
+  .entrant-info li h2 {color: $darkgrey}
+  .fcs {color: $darkgreen}
+  .fecs {color: $darkgold}
+  .quads {color: $darkblue}
+  .quints {color: $darkpink}
+  .neutral {background-color: $darkneutral}
+  .rival {background-color: $darkrival}
+  .self {background-color: $darkself}
+
+  &.vertical {
+    .ladder > h2 {background-color: $darkladderneutral}
+    .neutral {background-color: $darkladderneutral}
+    .rival {background-color: $darkladderrival}
+    .self {background-color: $darkladderself}
+  }
+}
