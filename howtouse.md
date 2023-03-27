@@ -29,5 +29,5 @@ If you want to change the background image replace bg.png with the your desired 
 
 If your name is too long you can override the name shown by providing an override name in `src/assets/config.js:26`.
 
-[^1]You can find your `entrantId` under Preferences on the ITL 2023 website.
-[^2]Although 4173 is the default port, if it is already taken Vite may use a different port. The proper port is displayed in your command line after running `npm run preview`
+[^1]: You can find your `entrantId` under Preferences on the ITL 2023 website.
+[^2]: Although 4173 is the default port, if it is already taken Vite may use a different port. The proper port is displayed in your command line after running `npm run preview`
