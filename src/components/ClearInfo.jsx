@@ -3,24 +3,24 @@ const ClearInfo = (props) => {
   return (
     <ul className="clear-info">
       <li className="passes">
-        <div>Passes:</div>
-        <div>{entrant.totalPass}</div>
+        <span>Passes:</span>
+        <span>{entrant.totalPass}</span>
       </li>
       <li className="fcs">
-        <div>FCs:</div>
-        <div>{entrant.totalFc}</div>
+        <span>FCs:</span>
+        <span>{entrant.totalFc}</span>
       </li>
       <li className="fecs">
-        <div>FECs:</div>
-        <div>{entrant.totalFec}</div>
+        <span>FECs:</span>
+        <span>{entrant.totalFec}</span>
       </li>
       <li className="quads">
-        <div>Quads:</div>
-        <div>{entrant.totalQuad}</div>
+        <span>Quads:</span>
+        <span>{entrant.totalQuad}</span>
       </li>
       <li className="quints">
-        <div>Quints:</div>
-        <div>{entrant.totalQuint}</div>
+        <span>Quints:</span>
+        <span>{entrant.totalQuint}</span>
       </li>
     </ul>
   );

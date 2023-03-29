@@ -9,10 +9,10 @@ const Ladder = (props) => {
         {ladder.map((player, index) => {
           return (
             <li key={index} className={player.type}>
-              <div className="ladder-rank">
+              <span className="ladder-rank">
                 {player.rank}. {player.name}
-              </div>
-              <div>{formatDifference(player.difference)}</div>
+              </span>
+              <span>{formatDifference(player.difference)}</span>
             </li>
           );
         })}

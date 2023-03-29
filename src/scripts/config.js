@@ -21,7 +21,7 @@
 
 const CONFIG_VARS = {
   entrantId: 41,
-  currentStyle: 1,
+  currentStyle: 2,
   avatarSource: "",
   overrideName: "",
 };

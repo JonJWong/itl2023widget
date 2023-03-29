@@ -12,6 +12,7 @@ import TechLevelInfo from "./TechLevelInfo";
 const ITLWidget = () => {
   const [state, setState] = useState(config.DEFAULT_STATE);
   const [loaded, setLoaded] = useState(false);
+  const [currStyle, setCurrStyle] = useState(config.currentStyle)
 
   const getInfo = () => {
     fetch(config.endpoint)
@@ -24,15 +25,27 @@ const ITLWidget = () => {
         return Promise.reject(response);
       })
       .then((json) => {
-        const data = json.data;
+        const { entrant, ladder } = json.data;
 
         // Calculate the ranking points difference between the current entrant and the rest of the ladder
         for (let i = 0; i < LADDER_LENGTH; i++) {
-          data.ladder[i].difference =
-            data.entrant.rankingPoints - data.ladder[i].rankingPoints;
+          ladder[i].difference =
+            entrant.rankingPoints - ladder[i].rankingPoints;
         }
 
-        setState(data);
+        entrant.techLevels = [
+          entrant.crossoverLevel,
+          entrant.sideswitchLevel,
+          entrant.footswitchLevel,
+          entrant.jackLevel,
+          entrant.doublestepLevel,
+          entrant.bracketLevel,
+          entrant.staminaLevel,
+        ];
+
+        entrant.totalTechLevel = entrant.techLevels.reduce((a, b) => a + b, 0);
+
+        setState({ entrant, ladder });
         if (!loaded) setLoaded(true);
       })
       .catch((error) => {
@@ -41,6 +54,7 @@ const ITLWidget = () => {
   };
 
   useEffect(() => {
+    setCurrStyle(config.currentStyle)
     // Runs on component mount
     getInfo();
     const componentInterval = setInterval(() => getInfo(), REFRESH_INTERVAL);
@@ -54,7 +68,7 @@ const ITLWidget = () => {
       Will run once on mount, and then whenever getInfo changes (never).
       Still runs on dismount with return
     */
-  }, [getInfo]);
+  }, [config.currentStyle]);
 
   if (!loaded) return <></>;
 
@@ -66,13 +80,13 @@ const ITLWidget = () => {
         <img
           src={config.avatarSource == "" ? "Avatar.png" : config.avatarSource}
         />
-        <h1>
+        <h2>
           {config.overrideName == "" ? entrant.name : config.overrideName}
-        </h1>
+        </h2>
 
         <EntrantInfo entrant={entrant} />
         <ClearInfo entrant={entrant} />
-        <TechLevelInfo entrant={entrant} />
+        <TechLevelInfo entrant={entrant} currStyle={currStyle} />
         <Ladder ladder={ladder} />
       </div>
     </div>
