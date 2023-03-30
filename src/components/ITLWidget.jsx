@@ -63,7 +63,7 @@ const ITLWidget = () => {
 
     setCurrStyle(config.currentStyle)
     getInfo(signal);
-    const componentInterval = setInterval(() => getInfo(), REFRESH_INTERVAL);
+    const componentInterval = setInterval(() => getInfo(signal), REFRESH_INTERVAL);
 
     return () => {
       controller.abort();
