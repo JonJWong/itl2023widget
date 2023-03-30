@@ -14,8 +14,8 @@ const ITLWidget = () => {
   const [loaded, setLoaded] = useState(false);
   const [currStyle, setCurrStyle] = useState(config.currentStyle)
 
-  const getInfo = () => {
-    fetch(config.endpoint)
+  const getInfo = (signal = null) => {
+    fetch(config.endpoint, { signal })
       .then((response) => {
         if (response.ok) {
           const json = response.json();
@@ -49,25 +49,26 @@ const ITLWidget = () => {
         if (!loaded) setLoaded(true);
       })
       .catch((error) => {
-        console.error("Error", error);
+        if (error.name === "AbortError") {
+          console.log("Aborted!", error)
+        } else {
+          console.log("Error", error)
+        }
       });
   };
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     setCurrStyle(config.currentStyle)
-    // Runs on component mount
-    getInfo();
+    getInfo(signal);
     const componentInterval = setInterval(() => getInfo(), REFRESH_INTERVAL);
 
     return () => {
-      // Runs on component un-mount
+      controller.abort();
       clearInterval(componentInterval);
     };
-
-    /*
-      Will run once on mount, and then whenever getInfo changes (never).
-      Still runs on dismount with return
-    */
   }, [config.currentStyle]);
 
   if (!loaded) return <></>;
